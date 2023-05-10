@@ -15,7 +15,7 @@ public class Movement : MonoBehaviour
        float newXPos = transform.localPosition.x + xOffSet;
 
        float yOffSet = yThrow * Time.deltaTime * controlSpeed;
-       float newYPos = transform.localPosition.x + yOffSet;
+       float newYPos = transform.localPosition.y + yOffSet;
 
        transform.localPosition = new Vector3 
        (newXPos,newYPos);
