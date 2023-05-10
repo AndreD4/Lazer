@@ -6,6 +6,7 @@ public class Movement : MonoBehaviour
 {
     [SerializeField] float controlSpeed = 10f;
     [SerializeField] float xRange = 5f;
+    [SerializeField] float yRange = 5f;
     
     void Update()
     {
@@ -17,10 +18,11 @@ public class Movement : MonoBehaviour
        float clampedXPos = Mathf.Clamp(rawXPos,-xRange,xRange);
 
        float yOffSet = yThrow * Time.deltaTime * controlSpeed;
-       float newYPos = transform.localPosition.y + yOffSet;
+       float rawYPos = transform.localPosition.y + yOffSet;
+       float clampedYPos = Mathf.Clamp(rawYPos,-yRange,yRange);
 
        transform.localPosition = new Vector3 
-       (clampedXPos,newYPos);
+       (clampedXPos,clampedYPos);
                                              
        
         
