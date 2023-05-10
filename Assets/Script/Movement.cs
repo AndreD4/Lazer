@@ -15,6 +15,9 @@ public class Movement : MonoBehaviour
     {
        float horizontalThrow = Input.GetAxis("Horizontal");
        Debug.Log(horizontalThrow);
+
+       float verticalThrow = Input.GetAxis("Vertical");
+       Debug.Log(verticalThrow);
         
     }
 }
