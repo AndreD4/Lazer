@@ -13,11 +13,14 @@ public class Movement : MonoBehaviour
     
     void Update()
     {
-       float horizontalThrow = Input.GetAxis("Horizontal");
-       Debug.Log(horizontalThrow);
+       float xThrow = Input.GetAxis("Horizontal");
+       float yThrow = Input.GetAxis("Vertical");
 
-       float verticalThrow = Input.GetAxis("Vertical");
-       Debug.Log(verticalThrow);
+       transform.localPosition = new Vector3 (transform.localPosition.x,
+                                              transform.localPosition.y,
+                                              transform.localPosition.z);
+                                             
+       
         
     }
 }

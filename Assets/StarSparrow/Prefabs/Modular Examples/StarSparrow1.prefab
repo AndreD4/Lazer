@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4720436039580920}
   - component: {fileID: 2633458045979082995}
   - component: {fileID: 46127218099627747}
+  - component: {fileID: 463615610}
   m_Layer: 0
   m_Name: StarSparrow1
   m_TagString: Untagged
@@ -107,6 +108,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820494407919854}
   m_Mesh: {fileID: 1269116562925425082, guid: 9eafec2478441af418574f3e9e971f8d, type: 3}
+--- !u!114 &463615610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820494407919854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e190cf91f57d6d41bd3684c4f55d544, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &985320127123076718
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -600,6 +613,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4720436039580920}
     m_Modifications:
+    - target: {fileID: 7432230514322780154, guid: c6b3f5b24fac195409550702e5daa40f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 69d393aa2d52fd34f80a48e88145a81c, type: 2}
     - target: {fileID: 7450972380993033928, guid: c6b3f5b24fac195409550702e5daa40f, type: 3}
       propertyPath: m_RootOrder
       value: 17
