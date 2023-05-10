@@ -4,18 +4,14 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    
-    void Start()
-    {
-        
-    }
-
+    [SerializeField] float controlSpeed = 10f;
     
     void Update()
     {
        float xThrow = Input.GetAxis("Horizontal");
        float yThrow = Input.GetAxis("Vertical");
-       float xOffSet = .1f;
+
+       float xOffSet = xThrow * Time.deltaTime * controlSpeed;
        float newXPos = transform.localPosition.x + xOffSet;
 
        transform.localPosition = new Vector3 
