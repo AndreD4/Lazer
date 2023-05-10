@@ -15,10 +15,11 @@ public class Movement : MonoBehaviour
     {
        float xThrow = Input.GetAxis("Horizontal");
        float yThrow = Input.GetAxis("Vertical");
+       float xOffSet = .1f;
+       float newXPos = transform.localPosition.x + xOffSet;
 
-       transform.localPosition = new Vector3 (transform.localPosition.x,
-                                              transform.localPosition.y,
-                                              transform.localPosition.z);
+       transform.localPosition = new Vector3 
+       (newXPos,yThrow);
                                              
        
         
