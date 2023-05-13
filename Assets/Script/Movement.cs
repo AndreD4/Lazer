@@ -16,7 +16,11 @@ public class Movement : MonoBehaviour
   }
 
     void ProcessRotation()
-    {
+    { 
+      float pitch = 0f;
+      float yaw = 0f;
+      float roll = 0f;
+      
       transform.localRotation = Quaternion.Euler();
     }
 
