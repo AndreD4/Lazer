@@ -29,12 +29,12 @@ public class Movement : MonoBehaviour
       float pitchToPostion = transform.localPosition.y * positionPitch;
       float pitchToControlThrow = yThrow * controlPitch;
 
-      //float yawToPosition = transform.localPosition.x * positionYaw;
+      float yawToPosition = transform.localPosition.x * positionYaw;
       //float rollToThrow = transform.localRotation.x * controlRoll + xThrow;
 
 
       float pitch = pitchToPostion + pitchToControlThrow;
-      float yaw = transform.localPosition.x * positionYaw;
+      float yaw = yawToPosition;
       float roll = 0f;
 
       transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
