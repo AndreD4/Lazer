@@ -10,6 +10,10 @@ public class Movement : MonoBehaviour
 
     [SerializeField] float positionPitch = -2f;
     [SerializeField] float controlPitch = -10f;
+    [SerializeField] float positionYaw = 2f;
+    [SerializeField]
+    
+  
 
     float xThrow,yThrow;
     
@@ -27,7 +31,7 @@ public class Movement : MonoBehaviour
 
 
       float pitch = pitchToPostion + pitchToControlThrow;
-      float yaw = 0f;
+      float yaw = positionYaw;
       float roll = 0f;
 
       transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
