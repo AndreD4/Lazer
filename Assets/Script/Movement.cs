@@ -11,7 +11,7 @@ public class Movement : MonoBehaviour
     [SerializeField] float positionPitch = -2f;
     [SerializeField] float controlPitch = -10f;
     [SerializeField] float positionYaw = 2f;
-    [SerializeField]
+    [SerializeField] float controlRoll = 10f;
     
   
 
@@ -29,10 +29,13 @@ public class Movement : MonoBehaviour
       float pitchToPostion = transform.localPosition.y * positionPitch;
       float pitchToControlThrow = yThrow * controlPitch;
 
+      float yawToPosition = transform.localPosition.x * positionYaw;
+      float rollToThrow = transform.localRotation.x * controlRoll;
+
 
       float pitch = pitchToPostion + pitchToControlThrow;
       float yaw = positionYaw;
-      float roll = 0f;
+      float roll = controlRoll;
 
       transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
     }
