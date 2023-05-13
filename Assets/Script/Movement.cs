@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour
     [SerializeField] float yRange = 5f;
 
     [SerializeField] float positionPitch = -2f;
+    [SerializeField] float controlPitch = -10f;
 
     float xThrow,yThrow;
     
@@ -21,7 +22,7 @@ public class Movement : MonoBehaviour
 
     void ProcessRotation()
     { 
-      float pitch = transform.localPosition.y * positionPitch;
+      float pitch = transform.localPosition.y * positionPitch + yThrow * controlPitch ;
       float yaw = 0f;
       float roll = 0f;
 
