@@ -614,6 +614,14 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 463615610, guid: 0478b1e28fd9831458b0f051b9d2ad8b, type: 3}
+      propertyPath: controlRoll
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 463615610, guid: 0478b1e28fd9831458b0f051b9d2ad8b, type: 3}
+      propertyPath: positionYaw
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 463615610, guid: 0478b1e28fd9831458b0f051b9d2ad8b, type: 3}
       propertyPath: controlSpeed
       value: 30
       objectReference: {fileID: 0}
