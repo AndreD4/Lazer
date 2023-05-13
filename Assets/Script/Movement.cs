@@ -11,8 +11,14 @@ public class Movement : MonoBehaviour
     void Update()
   {
     ProcessTranslation();
+    ProcessRotation();
 
   }
+
+    void ProcessRotation()
+    {
+      
+    }
 
     void ProcessTranslation()
   {
