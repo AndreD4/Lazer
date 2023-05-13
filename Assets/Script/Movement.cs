@@ -7,6 +7,10 @@ public class Movement : MonoBehaviour
     [SerializeField] float controlSpeed = 10f;
     [SerializeField] float xRange = 5f;
     [SerializeField] float yRange = 5f;
+
+    [SerializeField] float positionPitch = -2f;
+
+    float xThrow,yThrow;
     
     void Update()
   {
@@ -17,17 +21,17 @@ public class Movement : MonoBehaviour
 
     void ProcessRotation()
     { 
-      float pitch = 0f;
+      float pitch = transform.localPosition.y * positionPitch;
       float yaw = 0f;
       float roll = 0f;
-      
-      transform.localRotation = Quaternion.Euler();
+
+      transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
     }
 
     void ProcessTranslation()
   {
-    float xThrow = Input.GetAxis("Horizontal");
-    float yThrow = Input.GetAxis("Vertical");
+    xThrow = Input.GetAxis("Horizontal");
+    yThrow = Input.GetAxis("Vertical");
 
     float xOffSet = xThrow * Time.deltaTime * controlSpeed;
     float rawXPos = transform.localPosition.x + xOffSet;
