@@ -9,22 +9,25 @@ public class Movement : MonoBehaviour
     [SerializeField] float yRange = 5f;
     
     void Update()
-    {
-       float xThrow = Input.GetAxis("Horizontal");
-       float yThrow = Input.GetAxis("Vertical");
+  {
+    ProcessTranslation();
 
-       float xOffSet = xThrow * Time.deltaTime * controlSpeed;
-       float rawXPos = transform.localPosition.x + xOffSet;
-       float clampedXPos = Mathf.Clamp(rawXPos,-xRange,xRange);
+  }
 
-       float yOffSet = yThrow * Time.deltaTime * controlSpeed;
-       float rawYPos = transform.localPosition.y + yOffSet;
-       float clampedYPos = Mathf.Clamp(rawYPos,-yRange,yRange);
+    void ProcessTranslation()
+  {
+    float xThrow = Input.GetAxis("Horizontal");
+    float yThrow = Input.GetAxis("Vertical");
 
-       transform.localPosition = new Vector3 
-       (clampedXPos,clampedYPos);
-                                             
-       
-        
-    }
+    float xOffSet = xThrow * Time.deltaTime * controlSpeed;
+    float rawXPos = transform.localPosition.x + xOffSet;
+    float clampedXPos = Mathf.Clamp(rawXPos, -xRange, xRange);
+
+    float yOffSet = yThrow * Time.deltaTime * controlSpeed;
+    float rawYPos = transform.localPosition.y + yOffSet;
+    float clampedYPos = Mathf.Clamp(rawYPos, -yRange, yRange);
+
+    transform.localPosition = new Vector3
+    (clampedXPos, clampedYPos);
+  }
 }
