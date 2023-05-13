@@ -30,7 +30,7 @@ public class Movement : MonoBehaviour
       float pitchToControlThrow = yThrow * controlPitch;
 
       float yawToPosition = transform.localPosition.x * positionYaw;
-      //float rollToThrow = transform.localRotation.x * controlRoll + xThrow;
+      float rollToThrow = transform.localRotation.x * controlRoll + xThrow;
 
 
       float pitch = pitchToPostion + pitchToControlThrow;
