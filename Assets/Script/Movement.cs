@@ -17,7 +17,7 @@ public class Movement : MonoBehaviour
 
     void ProcessRotation()
     {
-      
+      transform.localRotation = Quaternion.Euler();
     }
 
     void ProcessTranslation()
