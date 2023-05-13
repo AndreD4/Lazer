@@ -22,7 +22,11 @@ public class Movement : MonoBehaviour
 
     void ProcessRotation()
     { 
-      float pitch = transform.localPosition.y * positionPitch + yThrow * controlPitch ;
+      float pitchToPostion = transform.localPosition.y * positionPitch;
+      float pitchToControlThrow = yThrow * controlPitch;
+
+
+      float pitch = pitchToPostion + pitchToControlThrow;
       float yaw = 0f;
       float roll = 0f;
 
