@@ -11,7 +11,7 @@ public class Movement : MonoBehaviour
     [SerializeField] float positionPitch = -2f;
     [SerializeField] float controlPitch = -10f;
     [SerializeField] float positionYaw = 2f;
-    [SerializeField] float controlRoll = 10f;
+    [SerializeField] float controlRoll = -20f;
     
   
 
